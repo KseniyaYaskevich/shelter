@@ -1,0 +1,124 @@
+.donation {
+  padding-top: 81px;
+  padding-bottom: 100px;
+  background-color: $color-light-l;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $tablet-max-width) {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+
+.donation__inner {
+  max-width: 380px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 42px;
+    text-align: center;
+  }
+}
+
+.donation__img {
+  margin-right: 30px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-right: 0;
+    order: 1;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 260px;
+    height: 135px;
+  }
+}
+
+.donation__title {
+  margin-bottom: 19px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 23px;
+  }
+}
+
+.donation__subtitle {
+  margin-bottom: 19px;
+
+  line-height: 110%;
+  letter-spacing: 0.06em;
+
+  color: $color-dark-l;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 21px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 23px;
+    letter-spacing: 0em;
+  }
+}
+
+.donation__link {
+  display: inline-block;
+  padding: 9px 15px;
+  margin-bottom: 20px;
+
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: $color-dark-l;
+
+  background-color: $color-primary;
+  border-radius: 9px;
+
+  transition: background-color .3s ease-in-out;
+
+  & img {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: $color-primary-light;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+}
+
+.donation__desc {
+  font-family: $font-family--arial;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 18px;
+  color: $color-dark-m;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 10px;
+    text-align: justify;
+  }
+}

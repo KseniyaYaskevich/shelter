@@ -1,0 +1,11 @@
+.page-header {
+  background-color: $color-black;
+  background: url('~images/noise_transparent@2x.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, $color-radial-brown 0%, $color-radial-black 100%);
+
+  & .container {
+    @media (max-width: $tablet-max-width) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
