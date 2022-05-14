@@ -1,0 +1,167 @@
+.page-footer {
+  padding-top: 40px;
+
+  background-color: $color-black;
+  background: url('~images/noise_transparent@2x.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, $color-radial-brown 0%, $color-radial-black 100%);
+
+  @include media-max-tablet {
+    padding-top: 30px;
+  }
+
+  & .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include media-mobile-only {
+      flex-direction: column;
+    }
+
+    @include media-max-tablet {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.page-footer__lists {
+  display: flex;
+  padding-top: 17px;
+
+  @include media-mobile-only {
+    flex-direction: column;
+    text-align: center;
+
+    margin-bottom: 40px;
+  }
+
+  @include media-max-tablet {
+    padding-top: 0;
+    margin-bottom: 64px;
+  }
+}
+
+.page-footer__contacts,
+.page-footer__location {
+  max-width: 302px;
+
+  color: $color-primary;
+
+  @include media-max-tablet {
+    padding-top: 0px;
+  }
+}
+
+.page-footer__contacts {
+  margin-right: 137px;
+
+  @include media-mobile-only {
+    margin-right: 0;
+    margin-bottom: 44px;
+  }
+
+  @include media-max-tablet {
+    margin-right: 37px;
+  }
+
+}
+
+.page-footer__location {
+
+  @include media-mobile-only {
+    margin-top: -5px;
+  }
+}
+
+.contacts__list,
+.location__list {
+  @include reset-list;
+}
+
+.contacts__title,
+.location__title {
+  color: $color-light-xl;
+}
+
+.contacts__title {
+  margin-bottom: 43px;
+}
+
+.contacts__item,
+.location__item {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__item {
+  margin-bottom: 43px;
+}
+
+.contacts__link,
+.location__link {
+  display: flex;
+  align-items: center;
+
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+
+  color: $color-primary;
+
+  @include media-mobile-only {
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+.contacts__img {
+  margin-right: 20px;
+}
+
+.location__title {
+  margin-bottom: 32px;
+
+  & br {
+    display: none;
+
+    @include media-mobile-only {
+      display: block;
+    }
+  }
+
+  @include media-mobile-only {
+    margin-bottom: 39px;
+  }
+}
+
+.location__item {
+  margin-bottom: 33px;
+
+  @include media-mobile-only {
+    margin-bottom: 40px;
+  }
+}
+
+.location__link {
+  @include media-mobile-only {
+    justify-content: flex-start;
+  }
+}
+
+.location__img {
+  margin-right: 18px;
+
+  @include media-mobile-only {
+    margin-right: 20px;
+  }
+}
+
+.page-footer__img {
+  @include media-mobile-only {
+    width: 260px;
+    height: 269px;
+  }
+}
