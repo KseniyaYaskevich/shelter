@@ -1,0 +1,21 @@
+.main-nav__toggle span,
+.main-nav__toggle::before,
+.main-nav__toggle::after {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.main-nav__list {
+  background-color: $color-light-xl;
+}
+
+.main-nav__link {
+  color: $color-dark-l;
+
+  &:hover {
+    color: $color-dark-3xl;
+  }
+
+  &--active {
+    color: $color-dark-3xl;
+  }
+}

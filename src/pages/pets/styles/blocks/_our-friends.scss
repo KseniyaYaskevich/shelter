@@ -1,0 +1,104 @@
+.our-friends {
+  padding-top: 200px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 76px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 161px;
+    padding-bottom: 42px;
+  }
+}
+
+.our-friends__title {
+  margin-bottom: 59px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 29px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 42px;
+  }
+}
+
+.swiper-pets {
+  max-width: 990px;
+  height: 900px;
+  width: 100%;
+  height: auto;
+  // @media (max-width: $tablet-max-width) {
+  //   max-width: 580px;
+  // }
+
+  // @media (max-width: $mobile-max-width) {
+  //   max-width: 270px;
+  //   height: 435px;
+  //   margin-bottom: 20px;
+  // }
+}
+
+// .our-friends__cards {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   column-gap: 40px;
+//   row-gap: 30px;
+
+//   @media (max-width: $tablet-max-width) {
+//     grid-template-columns: repeat(2, 1fr);
+//     max-width: 580px;
+//     margin: 0 auto;
+//     margin-bottom: 40px;
+//   }
+
+//   @media (max-width: $mobile-max-width) {
+//     grid-template-columns: 1fr;
+//     max-width: 270px;
+//     margin-bottom: 42px;
+//   }
+// }
+
+.our-friends__card.swiper-slide {
+  min-width: 270px;
+  height: 270px;
+  // height: calc((100% - 30px) / 2);
+}
+
+.our-friends__pagination {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.pagination__button {
+  width: 52px;
+  height: 52px;
+
+  font-size: 20px;
+  line-height: 115%;
+
+  border-radius: 100px;
+
+  &--active {
+    background-color: $color-primary;
+    cursor: default;
+
+    &:hover {
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+
+  &--disabled {
+    border-color: $color-dark-s;
+    cursor: default;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $color-dark-s;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.wrapper {
+  grid-template-rows: 1fr auto;
+}
+
+.page-header {
+  position: fixed;
+  width: 100%;
+  min-width: 320px;
+
+  background-color: $color-light-xl;
+
+  & .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
