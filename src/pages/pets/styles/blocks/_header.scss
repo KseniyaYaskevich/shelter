@@ -1,4 +1,4 @@
-.wrapper {
+.page-body {
   grid-template-rows: 1fr auto;
 }
 
@@ -9,7 +9,7 @@
 
   background-color: $color-light-xl;
 
-  & .container {
+  & .wrapper {
     padding-top: 30px;
     padding-bottom: 30px;
   }
