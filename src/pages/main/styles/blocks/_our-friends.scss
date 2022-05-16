@@ -1,39 +1,20 @@
 .our-friends {
-  padding-top: 80px;
 
-  & .container {
+  & .wrapper {
     position: relative;
   }
-
-  @media (max-width: $tablet-max-width) {
-    padding-top: 81px;
-  }
-
-  @media (max-width: $mobile-max-width) {
-    padding-top: 42px;
-    padding-bottom: 42px;
-  }
 }
 
-.our-friends__title {
-  margin-bottom: 58px;
-
-  @media (max-width: $mobile-max-width) {
-    margin-bottom: 41px;
-  }
-}
 
 .swiper {
-  max-width: 990px;
+  max-width: 270px;
 
-  @media (max-width: $tablet-max-width) {
+  @include media-tablet {
     max-width: 580px;
   }
 
-  @media (max-width: $mobile-max-width) {
-    max-width: 270px;
-    height: 435px;
-    margin-bottom: 20px;
+  @include media-desktop {
+    max-width: 990px;
   }
 }
 
@@ -43,7 +24,7 @@
 }
 
 .our-friends__buttons {
-  @media (max-width: $mobile-max-width) {
+  @include media-mobile-only {
     display: flex;
     justify-content: space-around;
     max-width: 270px;
@@ -54,27 +35,27 @@
 
 .our-friends__prev,
 .our-friends__next {
-  position: absolute;
-  top: 49%;
+  position: static;
 
-  @media (max-width: $mobile-max-width) {
-    position: static;
+  @include media-tablet {
+    position: absolute;
+    top: 49%;
   }
 }
 
 .our-friends__prev {
-  left: 40px;
+  left: 30px;
 
-  @media (max-width: $tablet-max-width) {
-    left: 30px;
+  @include media-desktop {
+    left: 40px;
   }
 }
 
 .our-friends__next {
-  right: 40px;
+  right: 30px;
   transform: rotate(-180deg);
 
-  @media (max-width: $tablet-max-width) {
-    right: 30px;
+  @include media-desktop {
+    right: 40px;
   }
 }

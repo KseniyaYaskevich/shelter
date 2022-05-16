@@ -1,78 +1,73 @@
 .about {
-  padding-top: 80px;
-  margin-bottom: 90px;
+  padding-top: 40px;
+  margin-bottom: 40px;
 
-  & .container {
+  @include media-tablet {
+    padding-top: 80px;
+    margin-bottom: 90px;
+  }
+
+  & .wrapper {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 
-    @media (max-width: $tablet-max-width) {
-      flex-direction: column;
-      align-items: center;
+    @include media-desktop {
+      flex-direction: row;
+      align-items: flex-start;
     }
-  }
-
-  @media (max-width: $tablet-max-width) {
-    padding-top: 81px;
-    margin-bottom: 100px;
-  }
-
-  @media (max-width: $mobile-max-width) {
-    padding-top: 42px;
-    margin-bottom: 43px;
-  }
-}
-
-.about__img {
-  margin-right: 120px;
-
-  @media (max-width: $tablet-max-width) {
-    margin-right: 0;
-    order: 1;
-  }
-
-  @media (max-width: $mobile-max-width) {
-    width: 260px;
-    height: 353px;
   }
 }
 
 .about__inner {
   max-width: 430px;
   padding-top: 15px;
+  margin-bottom: 20px;
+  text-align: center;
 
-  @media (max-width: $tablet-max-width) {
+  @include media-tablet {
     margin-bottom: 55px;
     padding-top: 0;
+    text-align: left;
   }
 
-  @media (max-width: $mobile-max-width) {
-    margin-bottom: 19px;
-    text-align: center;
+  @include media-desktop {
+    margin-bottom: 0;
+    order: 1;
   }
 }
 
 .about__title {
   margin-bottom: 23px;
-
-  @media (max-width: $mobile-max-width) {
-    margin-bottom: 24px;
-  }
 }
 
 .about__desc {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 
   font-family: $font-family--arial;
   line-height: 160%;
+
   color: $color-dark-xl;
 
-  @media (max-width: $mobile-max-width) {
-    padding: 0 15px;
-    margin-bottom: 22px;
-
+  @include media-mobile-only {
     text-align: justify;
     letter-spacing: 0;
+  }
+
+  @include media-tablet {
+    margin-bottom: 25px;
+  }
+}
+
+.about__img {
+
+  @include media-tablet {
+    width: 300px;
+    height: 408px;
+  }
+
+  @include media-desktop {
+    margin-right: 120px;
   }
 }
