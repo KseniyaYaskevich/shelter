@@ -20,25 +20,35 @@
 }
 
 .modal {
-  display: none;
   position: fixed;
   top: 20%;
   right: 0;
   left: 0;
   z-index: 10;
 
+  display: none;
+  align-items: center;
+  min-width: 240px;
   max-width: 900px;
-  min-height: 500px;
+  width: 65%;
+
   margin: auto;
-  padding: 0 20px;
+  padding: 10px;
 
   border-radius: 9px;
   background-color: $color-light-s;
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
+  @include media-tablet {
+    width: 83%;
+  }
+
+  @include media-desktop {
+    padding: 0 20px;
+  }
+
   &--show {
     display: flex;
-    align-items: center;
     animation-name: bounce;
     animation-duration: .6s;
   }
@@ -46,13 +56,18 @@
 
 .modal__button {
   position: absolute;
-  right: -40px;
-  top: -50px;
+  right: -25px;
+  top: -45px;
 
-  padding: 24px;
+  padding: 20px;
 
   border: 2px solid $color-primary;
   border-radius: 100px;
+
+  @include media-tablet {
+    right: -40px;
+    top: -40px;
+  }
 
   & span {
     position: relative;
@@ -83,35 +98,79 @@
   }
 }
 
-.modal__inner {
-  flex-basis: 40%;
+.modal__img {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+    width: 350px;
+    height: 350px;
+  }
+
+  @include media-desktop {
+    width: 500px;
+    height: 500px;
+
+    margin-right: 10px;
+  }
 }
 
 .modal__title {
   margin-bottom: 10px;
+
+  text-align: center;
+  font-size: 35px;
+  line-height: 130%;
   color: rgba(0, 0, 0, 1);
+
+  @include media-tablet {
+    text-align: left;
+  }
 }
 
 .modal__subtitle {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
+  text-align: center;
   font-size: 20px;
+  font-weight: 400;
   letter-spacing: 0.06em;
   color: rgba(0, 0, 0, 1);
+
+  @include media-tablet {
+    text-align: left;
+  }
+
+  @include media-desktop {
+    margin-bottom: 40px;
+  }
 }
 
 .modal__text {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 
+  text-align: justify;
+  font-size: 13px;
   line-height: 110%;
   letter-spacing: 0.06em;
   color: #000000;
+
+  @include media-tablet {
+    text-align: left;
+  }
+
+  @include media-desktop {
+    margin-bottom: 40px;
+
+    font-size: 15px;
+  }
 }
 
 .modal__list {
   @include reset-list;
-  list-style-image: url('~images/dot.png');
+  padding-left: 12px;
 
+  list-style-image: url('~images/dot.png');
   font-weight: 600;
 }
 
