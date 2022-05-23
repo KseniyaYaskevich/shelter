@@ -26,18 +26,13 @@ const onMainNavListClick = (evt) => {
   }
 };
 
-document.onclick = function (evt) {
+navToggle.addEventListener('click', onNavToggleClick);
+mainNavList.addEventListener('click', onMainNavListClick);
+
+document.addEventListener('click', (evt) => {
   if (navMain.classList.contains('main-nav--opened')) {
     if (evt.target.classList.contains('main-nav--opened')) {
       closeMenu();
     }
   }
-}
-
-if (navToggle) {
-  navToggle.addEventListener('click', onNavToggleClick);
-}
-
-if (navMain) {
-  mainNavList.addEventListener('click', onMainNavListClick);
-}
+});
