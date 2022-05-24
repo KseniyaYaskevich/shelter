@@ -16,9 +16,23 @@ const closeModal = () => {
   modal.classList.remove('modal--show');
 };
 
-const onCardsContainerClick = (evt) => {
-  if (evt.target.closest('.our-friends__card')) {
-    openModal();
+  const onCardsContainerClick = (evt) => {
+    const card = evt.target.closest('.our-friends__card');
+
+    if (card) {
+      const petName = card.querySelector('.card__title').getAttribute('data-name');
+
+      getData().then((data) => {
+        data.find((item) => {
+          if (item.name === petName) {
+            return renderModal(item);
+          };
+        });
+      });
+
+      openModal();
+    };
+  };
   }
 };
 
