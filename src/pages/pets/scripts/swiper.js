@@ -6,8 +6,6 @@ const swiperPets = new Swiper('.swiper-pets', {
   observeParents: true,
   observeSlideChildren: true,
   allowTouchMove: false,
-  spaceBetween: 40,
-  loopFillGroupWithBlank: true,
 
   pagination: {
     el: '.our-friends__pagination',
@@ -35,7 +33,7 @@ const swiperPets = new Swiper('.swiper-pets', {
         rows: 2,
         columns: 4,
       },
-
+      spaceBetween: 40,
     },
   }
 });
