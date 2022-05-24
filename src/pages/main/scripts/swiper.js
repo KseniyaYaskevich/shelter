@@ -13,7 +13,7 @@ const initSwiper = () => {
       prevEl: '.our-friends__prev',
       nextEl: '.our-friends__next',
     },
-    
+
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -31,6 +31,6 @@ const initSwiper = () => {
       },
     },
   });
-}
+};
 
-setTimeout(initSwiper, 200);
+export default initSwiper;
