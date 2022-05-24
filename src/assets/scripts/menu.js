@@ -36,3 +36,8 @@ document.addEventListener('click', (evt) => {
     }
   }
 });
+  document.addEventListener('keydown', (evt) => {
+    if (evt.keyCode === 27 || evt.key === "Escape" || evt.key === "Esc") {
+      closeMenu();
+    }
+  });

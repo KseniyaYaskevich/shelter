@@ -28,6 +28,12 @@ document.onclick = function (evt) {
       closeModal();
     }
   }
+
+  document.addEventListener('keydown', (evt) => {
+    if (evt.keyCode === 27 || evt.key === "Escape" || evt.key === "Esc") {
+      closeModal();
+    }
+  });
 };
 
 cardsContainer.addEventListener('click', onCardsContainerClick);
