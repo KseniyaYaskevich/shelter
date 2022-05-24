@@ -1,20 +1,23 @@
-const pageBody = document.querySelector('.page__body');
-const cardsContainer = document.querySelector('.our-friends__cards')
-const modalWrapper = pageBody.querySelector('.modal-wrapper');
-const modal = pageBody.querySelector('.modal');
-const buttonModal = pageBody.querySelector('.modal__button');
+import renderModal from "./render-modal";
+import getData from "./get-data";
 
-const openModal = () => {
-  pageBody.classList.add('page__body--lock');
-  modalWrapper.classList.add('modal-wrapper--show');
-  modal.classList.add('modal--show');
-};
+const modal = () => {
+  const pageBody = document.querySelector('.page__body');
+  const cardsContainer = pageBody.querySelector('.our-friends__cards')
+  const modalWrapper = pageBody.querySelector('.modal-wrapper');
+  const modal = modalWrapper.querySelector('.modal');
 
-const closeModal = () => {
-  pageBody.classList.remove('page__body--lock');
-  modalWrapper.classList.remove('modal-wrapper--show');
-  modal.classList.remove('modal--show');
-};
+  const openModal = () => {
+    pageBody.classList.add('page__body--lock');
+    modalWrapper.classList.add('modal-wrapper--show');
+    modal.classList.add('modal--show');
+  };
+
+  const closeModal = () => {
+    pageBody.classList.remove('page__body--lock');
+    modalWrapper.classList.remove('modal-wrapper--show');
+    modal.classList.remove('modal--show');
+  };
 
   const onCardsContainerClick = (evt) => {
     const card = evt.target.closest('.our-friends__card');
@@ -33,15 +36,23 @@ const closeModal = () => {
       openModal();
     };
   };
-  }
-};
 
-document.onclick = function (evt) {
-  if (modal.classList.contains('modal--show')) {
-    if (evt.target.classList.contains('modal-wrapper--show')) {
+  const onModalClick = (evt) => {
+    if (evt.target.classList.contains('modal__button') || evt.target.classList.contains("modal__span")) {
       closeModal();
     }
-  }
+  };
+
+  cardsContainer.addEventListener('click', onCardsContainerClick);
+  modal.addEventListener('click', onModalClick);
+
+  document.addEventListener('click', (evt) => {
+    if (modal.classList.contains('modal--show')) {
+      if (evt.target.classList.contains('modal-wrapper--show')) {
+        closeModal();
+      }
+    }
+  });
 
   document.addEventListener('keydown', (evt) => {
     if (evt.keyCode === 27 || evt.key === "Escape" || evt.key === "Esc") {
@@ -50,5 +61,4 @@ document.onclick = function (evt) {
   });
 };
 
-cardsContainer.addEventListener('click', onCardsContainerClick);
-buttonModal.addEventListener('click', closeModal);
+export default modal;
