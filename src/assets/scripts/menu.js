@@ -40,7 +40,7 @@ const menu = () => {
   });
 
   document.addEventListener('keydown', (evt) => {
-    if (evt.keyCode === 27 || evt.key === "Escape" || evt.key === "Esc") {
+    if (evt.keyCode === 27 || evt.key === 'Escape' || evt.key === 'Esc') {
       closeMenu();
     }
   });

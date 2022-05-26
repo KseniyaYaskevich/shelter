@@ -1,8 +1,8 @@
 const renderModal = (item) => {
-    const modal = document.querySelector('.modal');
-    modal.innerHTML = '';
+  const modal = document.querySelector('.modal');
+  modal.innerHTML = '';
 
-    modal.insertAdjacentHTML('beforeend', `
+  modal.insertAdjacentHTML('beforeend', `
         <button class="modal__button button--transparent" type="button" aria-label="Close modal">
             <span class="modal__span"></span>
         </button>
@@ -20,6 +20,6 @@ const renderModal = (item) => {
             </ul>
         </div>
     `);
-};    
+};
 
 export default renderModal;

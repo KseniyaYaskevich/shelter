@@ -1,5 +1,5 @@
-import getData from "./get-data";
-import renderItems from "./render-items";
+import getData from './get-data';
+import renderItems from './render-items';
 
 const loadData = () => {
     getData().then((data) => {

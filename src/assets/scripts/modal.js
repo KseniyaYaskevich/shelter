@@ -1,5 +1,5 @@
-import renderModal from "./render-modal";
-import getData from "./get-data";
+import renderModal from './render-modal';
+import getData from './get-data';
 
 const modal = () => {
   const pageBody = document.querySelector('.page__body');
@@ -38,7 +38,7 @@ const modal = () => {
   };
 
   const onModalClick = (evt) => {
-    if (evt.target.classList.contains('modal__button') || evt.target.classList.contains("modal__span")) {
+    if (evt.target.classList.contains('modal__button') || evt.target.classList.contains('modal__span')) {
       closeModal();
     }
   };
@@ -55,7 +55,7 @@ const modal = () => {
   });
 
   document.addEventListener('keydown', (evt) => {
-    if (evt.keyCode === 27 || evt.key === "Escape" || evt.key === "Esc") {
+    if (evt.keyCode === 27 || evt.key === 'Escape' || evt.key === 'Esc') {
       closeModal();
     }
   });

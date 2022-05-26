@@ -29,7 +29,7 @@
   width: $card-width;
 
   @include media-tablet {
-    width: calc($card-width * 2 + 40px);
+    width: calc($card-width * 2 + 30px);
   }
 
   @include media-desktop {
@@ -62,24 +62,25 @@
   line-height: 115%;
 
   border-radius: 100px;
+}
 
-  &--active {
-    background-color: $color-primary;
-    cursor: default;
+.pagination__button:disabled,
+.pagination__button[disabled] {
+  border-color: $color-dark-s;
+  cursor: default;
 
-    &:hover {
-      background-color: $color-primary;
-      border-color: $color-primary;
-    }
-  }
-
-  &--disabled {
+  &:hover {
+    background-color: transparent;
     border-color: $color-dark-s;
-    cursor: default;
+  }
+}
 
-    &:hover {
-      background-color: transparent;
-      border-color: $color-dark-s;
-    }
+.swiper-button-disabled {
+  border-color: $color-dark-s;
+  cursor: default;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $color-dark-s;
   }
 }
