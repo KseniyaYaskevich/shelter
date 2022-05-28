@@ -111,3 +111,6 @@ const onPaginationContainerClick = (evt) => {
     setAttribute();
   }
 };
+
+paginationContainer.addEventListener('click', onPaginationContainerClick);
+window.addEventListener('resize', initPageSize);
