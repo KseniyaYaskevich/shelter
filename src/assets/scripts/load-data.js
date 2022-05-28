@@ -2,16 +2,14 @@ import getData from './get-data';
 import renderItems from './render-items';
 import mixItems from './mix-items';
 
-const loadData = (cardsNumber) => {
+const loadData = (number) => {
   getData().then((data) => {
 
-    const getCard = () => {
-      return mixItem(data);
+    const getCards = () => {
+      return mixItems(data, number);
     };
 
-    const cards = new Array(cardsNumber).fill().map(getCard);
-
-    renderItems(cards);
+    renderItems(getCards());
   });
 };
 
