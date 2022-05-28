@@ -8,7 +8,7 @@ const renderItems = (items) => {
         <img class="card__img" src="${img}" alt="${'Picture of ' + type + ' ' + breed}" 
                 width="270" height="270">
         <h4 class="card__title" data-name="${name}">${name}</h4>
-        <button class="button button--transparent card__button" type="button">Learn more</button>
+        <a class="button button--transparent card__button">Learn more</a>
     `;
     cardsWrapper.append(divElement);
   });
