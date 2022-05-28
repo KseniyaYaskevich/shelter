@@ -93,3 +93,21 @@ const setAttribute = () => {
 };
 
 setAttribute();
+
+const onPaginationContainerClick = (evt) => {
+  if (evt.target === buttonFirstSlide) {
+    swiperPets.slideTo(0);
+  }
+  if (evt.target === buttonLastSlide) {
+    swiperPets.slideTo(swiperPets.slides.length - 1);
+  }
+  if (evt.target === buttonPrevSlide) {
+    swiperPets.slidePrev();
+  }
+  if (evt.target === buttonNextSlide) {
+    swiperPets.slideNext();
+  }
+  if (evt.target.classList.contains('pagination__button')) {
+    setAttribute();
+  }
+};
