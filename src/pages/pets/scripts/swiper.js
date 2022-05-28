@@ -8,6 +8,7 @@ const buttonPrevSlide = paginationContainer.querySelector(".pagination__button--
 const buttonNextSlide = paginationContainer.querySelector(".pagination__button--next");
 const counter = paginationContainer.querySelector('.pagination__button--counter');
 
+const SLIDES_NUMBER = 48;
 const swiperPets = new Swiper('.swiper-pets', {
   observer: true,
   observeParents: true,
