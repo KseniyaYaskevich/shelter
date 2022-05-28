@@ -45,9 +45,17 @@ const swiperPets = new Swiper('.swiper-pets', {
       slidesPerGroup: 4,
       grid: {
         rows: 2,
-        columns: 4,
       },
       spaceBetween: 40,
     },
+  },
+
+  on: {
+    init: function () {
+      counter.innerHTML = this.realIndex / this.params.slidesPerView + 1
+    },
+    slideChange: function () {
+      counter.innerHTML = this.realIndex / this.params.slidesPerView + 1
+    }
   }
 });
