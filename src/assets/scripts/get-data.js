@@ -1,5 +1,5 @@
 const getData = () => {
-  return fetch('https://raw.githubusercontent.com/rolling-scopes-school/tasks/master/stage1/stream1/shelter/pets.json')
+  return fetch('https://pets-81d26-default-rtdb.firebaseio.com/pets.json')
     .then((response) => {
       return response.json();
     });
