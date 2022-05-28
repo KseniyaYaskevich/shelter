@@ -1,6 +1,13 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
+const paginationContainer = document.querySelector('.our-friends__pagination')
+const buttonFirstSlide = paginationContainer.querySelector(".pagination__button--first");
+const buttonLastSlide = paginationContainer.querySelector(".pagination__button--last");
+const buttonPrevSlide = paginationContainer.querySelector(".pagination__button--prev");
+const buttonNextSlide = paginationContainer.querySelector(".pagination__button--next");
+const counter = paginationContainer.querySelector('.pagination__button--counter');
+
 const swiperPets = new Swiper('.swiper-pets', {
   observer: true,
   observeParents: true,
