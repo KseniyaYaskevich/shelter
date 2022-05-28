@@ -75,3 +75,21 @@ const initPageSize = () => {
 
 initPageSize(SLIDES_NUMBER);
 
+const setAttribute = () => {
+  buttonFirstSlide.setAttribute('disabled', 'disabled');
+  buttonPrevSlide.setAttribute('disabled', 'disabled');
+  buttonLastSlide.removeAttribute('disabled');
+  buttonNextSlide.removeAttribute('disabled');
+
+  if (counter.innerHTML > 1) {
+    buttonFirstSlide.removeAttribute('disabled');
+    buttonPrevSlide.removeAttribute('disabled');
+  };
+
+  if (counter.innerHTML == lastPage) {
+    buttonLastSlide.setAttribute('disabled', 'disabled');
+    buttonNextSlide.setAttribute('disabled', 'disabled');
+  };
+};
+
+setAttribute();
