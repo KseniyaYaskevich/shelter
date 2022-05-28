@@ -1,6 +1,6 @@
 import getData from './get-data';
 import renderItems from './render-items';
-import mixItem from './mix-item';
+import mixItems from './mix-items';
 
 const loadData = (cardsNumber) => {
   getData().then((data) => {
