@@ -26,11 +26,6 @@
   }
 }
 
-.our-friends__link {
-  display: inline-block;
-  text-decoration: none;
-}
-
 .our-friends__card {
   min-height: 435px;
   max-width: 270px;
@@ -67,15 +62,4 @@
 .card__button {
   margin-bottom: 30px;
   padding: 13px 42px;
-}
-
-.our-friends__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 52px;
-  height: 52px;
-  border-radius: 100px;
-  color: $color-dark-3xl;
 }

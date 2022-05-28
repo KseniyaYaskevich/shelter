@@ -54,28 +54,16 @@
   margin: 0 auto;
 }
 
-.pagination__button {
-  width: 52px;
-  height: 52px;
+.pagination__button--active {
+  background-color: rgb(253, 220, 196);
+  border-color: rgb(253, 220, 196);
 
-  font-size: 20px;
-  line-height: 115%;
-
-  border-radius: 100px;
+  pointer-events: none;
+  cursor: default;
 }
 
 .pagination__button:disabled,
 .pagination__button[disabled] {
-  border-color: $color-dark-s;
-  cursor: default;
-
-  &:hover {
-    background-color: transparent;
-    border-color: $color-dark-s;
-  }
-}
-
-.swiper-button-disabled {
   border-color: $color-dark-s;
   cursor: default;
 

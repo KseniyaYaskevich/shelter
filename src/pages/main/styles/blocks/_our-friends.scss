@@ -32,6 +32,12 @@
   }
 }
 
+.our-friends__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .our-friends__prev,
 .our-friends__next {
   position: static;
