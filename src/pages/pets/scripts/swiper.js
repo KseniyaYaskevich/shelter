@@ -59,3 +59,19 @@ const swiperPets = new Swiper('.swiper-pets', {
     }
   }
 });
+
+const initPageSize = () => {
+  if (window.innerWidth < 768) {
+    lastPage = SLIDES_NUMBER / 3;
+  }
+  if (window.innerWidth < 1280 && window.innerWidth > 767) {
+    lastPage = SLIDES_NUMBER / 6;
+  }
+  if (window.innerWidth > 1220) {
+    lastPage = SLIDES_NUMBER / 8;
+  }
+  return lastPage;
+};
+
+initPageSize(SLIDES_NUMBER);
+
