@@ -7,7 +7,6 @@ const initSwiper = () => {
     observeParents: true,
     observeSlideChildren: true,
     allowTouchMove: false,
-    loop: true,
 
     navigation: {
       prevEl: '.our-friends__prev',
