@@ -1,0 +1,28 @@
+.page-header {
+  & .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.page-header__logo {
+  text-align: center;
+  text-decoration: none;
+}
+
+.logo__title {
+  margin-bottom: 10px;
+
+  letter-spacing: 0.06em;
+}
+
+.logo__subtitle {
+  @include font ($size: 13px, $height: 15px);
+
+  font-family: $font-family--arial;
+  letter-spacing: 0.1em;
+}

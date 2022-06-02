@@ -1,0 +1,150 @@
+.page-footer {
+  padding-top: 30px;
+
+  background-color: $color-black;
+  background: url('~images/noise_transparent@2x.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, $color-radial-brown 0%, $color-radial-black 100%);
+
+  @include media-tablet {
+    padding-top: 40px;
+  }
+
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-desktop {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+}
+
+.page-footer__lists {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  text-align: center;
+
+  @include media-tablet {
+    flex-direction: row;
+    margin-bottom: 64px;
+
+    text-align: left;
+  }
+
+  @include media-desktop {
+    padding-top: 17px;
+    margin-bottom: 0;
+  }
+
+}
+
+.page-footer__contacts,
+.page-footer__location {
+  max-width: 302px;
+
+  color: $color-primary;
+}
+
+.page-footer__contacts {
+  margin-bottom: 44px;
+
+  @include media-tablet {
+    margin-right: 37px;
+    margin-bottom: 0;
+  }
+
+  @include media-desktop {
+    margin-right: 137px;
+  }
+}
+
+.contacts__list,
+.location__list {
+  @include reset-list;
+}
+
+.contacts__title,
+.location__title {
+  color: $color-light-xl;
+}
+
+.contacts__title {
+  margin-bottom: 43px;
+}
+
+.contacts__item,
+.location__item {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__item {
+  margin-bottom: 43px;
+}
+
+.contacts__link,
+.location__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+
+  @include font($size: 20px, $height: 115%);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+
+  color: $color-primary;
+
+  @include media-tablet {
+    justify-content: flex-start;
+  }
+}
+
+.contacts__img {
+  margin-right: 20px;
+}
+
+.location__title {
+  margin-bottom: 40px;
+
+  @include media-tablet {
+    margin-bottom: 32px;
+  }
+
+  & br {
+    display: block;
+
+    @include media-tablet {
+      display: none;
+    }
+  }
+}
+
+.location__item {
+  margin-bottom: 40px;
+
+  @include media-tablet {
+    margin-bottom: 33px;
+  }
+}
+
+.location__link {
+  justify-content: flex-start;
+}
+
+.location__img {
+  margin-right: 20px;
+}
+
+.page-footer__img {
+
+  @include media-desktop {
+    width: 300px;
+    height: 310px;
+  }
+}
