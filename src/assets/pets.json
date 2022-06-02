@@ -1,4 +1,5 @@
-[
+{
+  "pets": [
     {
       "name": "Jennifer",
       "img": "./assets/images/jennifer.png",
@@ -88,3 +89,4 @@
       "parasites": ["lice", "fleas"]
     }
   ]
+}
