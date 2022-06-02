@@ -64,3 +64,13 @@
     right: 40px;
   }
 }
+
+.swiper-button-disabled {
+  border-color: rgb(205, 205, 205);
+  cursor: default;
+
+  &:hover {
+    background-color: transparent;
+    border-color: rgb(205, 205, 205);
+  }
+}
